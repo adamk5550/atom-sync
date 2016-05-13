@@ -1,0 +1,95 @@
+"*":
+  "atom-ternjs":
+    displayAboveSnippets: true
+    useSnippets: true
+    useSnippetsAndFunction: true
+  core:
+    disabledPackages: [
+      "run-file"
+      "web-view"
+      "ionic-atom"
+      "pigments"
+      "terminal-plus"
+      "seti-icons"
+      "linter-jscs"
+    ]
+    themes: [
+      "genesis-ui"
+      "atom-monokai"
+    ]
+  editor:
+    backUpBeforeSaving: true
+    fontSize: 15
+    invisibles: {}
+    preferredLineLength: 100
+    scrollPastEnd: true
+    showIndentGuide: true
+    showInvisibles: true
+  "exception-reporting":
+    userId: "5172bb0b-02e0-6b07-7f74-94cbd174b270"
+  "genesis-ui":
+    distractionFree:
+      hideBottom: false
+      hideFiles: false
+      hideTabs: false
+  "git-projects":
+    rootPath: "/Users/a.kelly/Documents/Repositories"
+  linter:
+    ignoredMessageTypes: [
+      "requireTrailingComma"
+    ]
+    showErrorInline: false
+    showErrorTabLine: true
+  "linter-jscs":
+    esnext: true
+    fixOnSave: true
+  "linter-jshint":
+    lintInlineJavaScript: true
+  minimap:
+    absoluteMode: true
+  pigments:
+    markerType: "square-dot"
+  "tool-bar":
+    position: "Left"
+  "tool-bar-config": [
+    {
+      icon: "document"
+      iconSet: "ion"
+      title: "New File"
+      callback: "application:new-file"
+    }
+    {
+      icon: "fork-repo"
+      iconSet: "ion"
+      title: "Repos"
+      callback: "git-projects:toggle"
+    }
+    {
+      icon: "git"
+      iconSet: "fa"
+      title: "Git"
+      callback: "git-control:toggle"
+    }
+    {
+      icon: "terminal"
+      iconSet: "fa"
+      title: "terminal"
+      callback: "terminal-status:toggle"
+    }
+    {
+      icon: "play"
+      iconSet: "fa"
+      title: "run"
+      callback: "script:run"
+    }
+    {
+      icon: "stop"
+      iconSet: "fa"
+      title: "stop"
+      callback: "script:stop"
+    }
+  ]
+  "tree-view":
+    hideVcsIgnoredFiles: true
+  welcome:
+    showOnStartup: false

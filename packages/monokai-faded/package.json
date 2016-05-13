@@ -1,0 +1,35 @@
+{
+  "name": "monokai-faded",
+  "theme": "syntax",
+  "version": "0.0.3",
+  "private": false,
+  "description": "A faded Monokai syntax theme for Atom.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dionmunk/monokai-faded.git"
+  },
+  "license": "MIT",
+  "engines": {
+    "atom": ">0.39.0"
+  },
+  "readme": "# Monokai Faded Theme\n\nA faded Monokai syntax theme for Atom based on https://github.com/kevinsawicki/monokai.\n\n![Screenshot](http://dionmunk.com/assets/posts/2016-02-29-monokai-my-life/monokai-faded.png)\n",
+  "readmeFilename": "README.md",
+  "bugs": {
+    "url": "https://github.com/dionmunk/monokai-faded/issues"
+  },
+  "homepage": "https://github.com/dionmunk/monokai-faded#readme",
+  "_id": "monokai-faded@0.0.3",
+  "_shasum": "17561e3bbd90e0d95dc596f139029a3d9dfbdded",
+  "_resolved": "file:../d-116412-32957-11v8zoo/package.tgz",
+  "_from": "../d-116412-32957-11v8zoo/package.tgz",
+  "_atomModuleCache": {
+    "version": 1,
+    "dependencies": [],
+    "extensions": {
+      ".json": [
+        "package.json"
+      ]
+    },
+    "folders": []
+  }
+}
