@@ -33,7 +33,7 @@
       hideFiles: false
       hideTabs: false
   "git-projects":
-    rootPath: "/Users/a.kelly/Documents/Repositories"
+    rootPath: "/Users/"
   linter:
     ignoredMessageTypes: [
       "requireTrailingComma"
