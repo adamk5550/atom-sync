@@ -1,6 +1,9 @@
 # atom-sync
 Backup of my Atom packages and config, which can be shared easily
 
+## Usage
+To Install this atom IDE ensure that you have Atom installed and then copy the contents of this repo into your .atom directory.
+
 ## Screenshot
 ![Screenshot](img/screenshot.png)
 
