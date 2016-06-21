@@ -9,8 +9,6 @@ Backup of my Atom packages and config, which can be shared easily
 git clone https://github.com/adamk5550/atom-sync.git .
 ```
 
-
-
 ## Screenshot
 ![Screenshot](img/screenshot.png)
 
@@ -48,9 +46,10 @@ git clone https://github.com/adamk5550/atom-sync.git .
 
 ## Toolbar
 
-- Newfile = Document
-- Fork Repo = Search Repos
-- Git = Git Control
-- Terminal = Terminal
-- Gavel = Git Blame
-
+|Icon|Git Package/Action|
+|---|---|
+|Document|New File|
+|Fork Repo|Git Projects|
+|Git|Git Control|
+|Terminal|Terminal|
+|Gavel|Git Blame|
