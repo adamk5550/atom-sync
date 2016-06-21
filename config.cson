@@ -33,7 +33,7 @@
       hideFiles: false
       hideTabs: false
   "git-projects":
-    rootPath: "/Users/"
+    rootPath: "/Users/a.kelly/Documents"
   linter:
     ignoredMessageTypes: [
       "requireTrailingComma"
@@ -77,16 +77,10 @@
       callback: "terminal-status:toggle"
     }
     {
-      icon: "play"
+      icon: "gavel"
       iconSet: "fa"
-      title: "run"
-      callback: "script:run"
-    }
-    {
-      icon: "stop"
-      iconSet: "fa"
-      title: "stop"
-      callback: "script:stop"
+      title: "blame"
+      callback: "git-blame:toggle"
     }
   ]
   "tree-view":
