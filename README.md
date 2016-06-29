@@ -3,11 +3,14 @@ Backup of my Atom packages and config, which can be shared easily
 
 ## Usage
 1. To Install this atom IDE ensure that you have Atom installed.
-2. Go into your .atom directory and remove all files and folders. 
-3. While in .atom directory run 
+2. Run the below command to install my version of atom.
 ```
-git clone https://github.com/adamk5550/atom-sync.git .
+rm -rf ~/.atom/
+git clone https://github.com/adamk5550/atom-sync.git ~/.atom
+
 ```
+
+The above will remove your .atom folder and clone down my config in a new .atom folder :tada:
 
 ## Screenshot
 ![Screenshot](img/screenshot.png)
