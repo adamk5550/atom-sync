@@ -12,6 +12,7 @@
       "terminal-plus"
       "seti-icons"
       "linter-jscs"
+      "atom-bootstrap3"
     ]
     themes: [
       "genesis-ui"
@@ -32,8 +33,11 @@
       hideBottom: false
       hideFiles: false
       hideTabs: false
+  "git-blame":
+    columnWidth: 310
+    showOnlyLastNames: false
   "git-projects":
-    rootPath: "/Users/a.kelly/Documents"
+    rootPath: "~/Documents"
   linter:
     ignoredMessageTypes: [
       "requireTrailingComma"
