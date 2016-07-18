@@ -70,6 +70,12 @@
       callback: "git-projects:toggle"
     }
     {
+      icon: "merge"
+      iconSet: "ion"
+      title: "Merge Conflicts"
+      callback: "merge-conflicts:detect"
+    }
+    {
       icon: "git"
       iconSet: "fa"
       title: "Git"

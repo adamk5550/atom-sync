@@ -57,6 +57,7 @@ The above will remove your .atom folder and clone down my config in a new .atom 
 |---|---|
 |Document|New File|
 |Fork Repo|Git Projects|
+|Merge| Merge Conflicts|
 |Git|Git Control|
 |Terminal|Terminal|
 |Gavel|Git Blame|
