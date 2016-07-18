@@ -70,89 +70,108 @@ the tool bar, follow the instructions below.
 Make sure the following properties are part of your `package.json`.
 
 ```json
-"package-dependencies": {
-  "tool-bar": "^0.2.0"
-},
 "consumedServices": {
   "tool-bar": {
     "versions": {
-      "^0.1.0": "consumeToolBar"
+      "^0 || ^1": "consumeToolBar"
     }
   }
 }
 ```
+
+We recommend using [Atom-Package-Deps](https://github.com/steelbrain/package-deps) 
+in your package for installing dependency packages like this package.
 
 ### Main package file
 
 In your main package file, add the following methods and replace
 `your-package-name` with your package name.
 
-```coffeescript
-consumeToolBar: (toolBar) ->
-  @toolBar = toolBar 'your-package-name'
+```js
+let toolBar;
 
-  # Add buttons and spacers here...
+export function consumeToolBar(getToolBar) {
+  toolBar = getToolBar('your-package-name');
+  // Add buttons and spacers here...
+}
 
-deactivate: ->
-  @toolBar?.removeItems()
+export function deactivate() {
+  if (toolBar) {
+    toolBar.removeItems();
+    toolBar = null;
+  }
+}
 ```
 
 ### Example
 
-```coffeescript
-consumeToolBar: (toolBar) ->
-  @toolBar = toolBar 'your-package-name'
+```js
+let toolBar;
 
-  # Adding button
-  @toolBar.addButton
-    icon: 'octoface'
-    callback: 'application:about'
-    tooltip: 'About Atom'
+export function consumeToolBar(getToolBar) {
+  toolBar = getToolBar('your-package-name');
 
-  # Adding spacer
-  @toolBar.addSpacer()
-
-  # Using custom icon set (Ionicons)
-  button = @toolBar.addButton
-    icon: 'gear-a'
-    callback: 'application:show-settings'
-    tooltip: 'Show Settings'
-    iconset: 'ion'
-
-  # Disable button
-  button.setEnabled false
-
-  # Function with data in callback
-  @toolBar.addButton
-    icon: 'alert',
-    callback: (data)->
-      alert data
-    tooltip: 'Show Alert'
-    data: 'foo'
-
-  # Callback with modifiers
-  @toolBar.addButton
+  // Adding button
+  toolBar.addButton({
     icon: 'octoface',
-    callback:
-      '': 'application:cmd-1'  # Without modifiers is default action
-      'alt': 'application:cmd-2'
-      'ctrl': 'application:cmd-3'
-      'shift': (data) -> console.log data  # With function callback
-      'alt+shift': 'application:cmd-5'  # Multiple modifiers
-      'alt+ctrl+shift': 'application:cmd-6'  # All modifiers      
+    callback: 'application:about',
+    tooltip: 'About Atom'
+  });
+
+  // Adding spacer
+  toolBar.addSpacer();
+
+  // Using custom icon set (Ionicons)
+  const button = toolBar.addButton({
+    icon: 'gear-a',
+    callback: 'application:show-settings',
+    tooltip: 'Show Settings',
+    iconset: 'ion'
+  });
+
+  // Disable button
+  button.setEnabled(false);
+
+  // Function with data in callback
+  toolBar.addButton({
+    icon: 'alert',
+    callback(data) {
+      alert(data);
+    },
+    tooltip: 'Show Alert',
     data: 'foo'
+  });
 
-  # Adding spacer and button at the beginning of the tool bar
-  @toolBar.addSpacer priority: 10
-  @toolBar.addButton
-    icon: 'octoface'
-    callback: 'application:about'
+  // Callback with modifiers
+  toolBar.addButton({
+    icon: 'octoface',
+    callback: {
+      '': 'application:cmd-1',      // Without modifiers is default action
+      'alt': 'application:cmd-2',
+      'ctrl': 'application:cmd-3',  // With function callback
+      'shift'(data) {
+        console.log(data);
+      },
+      'alt+shift': 'application:cmd-5',       // Multiple modifiers
+      'alt+ctrl+shift': 'application:cmd-6'   // All modifiers 
+    },
+    data: 'foo'
+  });
+
+  // Adding spacer and button at the beginning of the tool bar
+  toolBar.addSpacer({priority: 10});
+  toolBar.addButton({
+    icon: 'octoface',
+    callback: 'application:about',
     priority: 10
+  });
 
-  # Cleaning up when tool bar is deactivated
-  @toolBar.onDidDestroy ->
-    @toolBar = null
-    # Teardown any stateful code that depends on tool bar ...
+  // Cleaning up when tool bar is deactivated
+  toolBar.onDidDestroy(() => {
+    this.toolBar = null;
+    // Teardown any stateful code that depends on tool bar ...
+  });
+}
 ```
 
 ## Methods
@@ -168,6 +187,9 @@ commands or custom function (see [example](#example)).
 The remaining properties `tooltip` (default there is no tooltip),
 `iconset` (defaults to `Octicons`), `data` and `priority` (defaults `50`)
 are optional.
+
+The return value of this method shares another method called 
+`setEnabled(enabled)` to enable or disable the button.
 
 ### `.addSpacer({priority})`
 
@@ -220,3 +242,4 @@ using this one. For all contributions credits are due:
 *   Carlos Santos
 *   [Daniel Alejandro Cast](https://github.com/lexcast)
 *   [James Coyle](https://github.com/JamesCoyle)
+*   [Andres Suarez](https://github.com/zertosh)

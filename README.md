@@ -27,6 +27,7 @@ The above will remove your .atom folder and clone down my config in a new .atom 
 - atom-ternjs
 - autoclose-html
 - autocomplete-modules
+- css-comb (Required Setup)
 - git-control
 - git-blame
 - git-history
@@ -42,10 +43,13 @@ The above will remove your .atom folder and clone down my config in a new .atom 
 - open-in-browser
 - react
 - react-snippets
+- stacktrace
 - script
 - terminal-status
 - tool-bar
 - tool-bar-config
+- atom-bootstrap3 (Disabled)
+- linter-jscs (Disabled)
 
 ## Toolbar
 
@@ -56,3 +60,4 @@ The above will remove your .atom folder and clone down my config in a new .atom 
 |Git|Git Control|
 |Terminal|Terminal|
 |Gavel|Git Blame|
+|Globe|Open In Browser|

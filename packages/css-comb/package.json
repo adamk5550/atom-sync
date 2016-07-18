@@ -1,7 +1,7 @@
 {
   "name": "css-comb",
   "main": "./lib/main",
-  "version": "2.4.3",
+  "version": "2.4.4",
   "description": "CSS Comb for Atom",
   "repository": {
     "type": "git",
@@ -20,7 +20,8 @@
     "atom": ">0.50.0"
   },
   "dependencies": {
-    "csscomb": "^3.1.8"
+    "csscomb": "^3.1.8",
+    "minimatch": "^3.0.2"
   },
   "devDependencies": {
     "babel-cli": "^6.6.5",
@@ -41,10 +42,10 @@
     "url": "https://github.com/d4rkr00t/css-comb-atom/issues"
   },
   "homepage": "https://github.com/d4rkr00t/css-comb-atom#readme",
-  "_id": "css-comb@2.4.3",
-  "_shasum": "52f42edddabe2b1f09bde97a63d60b3441480740",
-  "_resolved": "file:../d-116521-35086-16t1yxy/package.tgz",
-  "_from": "../d-116521-35086-16t1yxy/package.tgz",
+  "_id": "css-comb@2.4.4",
+  "_shasum": "1c394911da0da9b31a82bfd8d1927883cc525572",
+  "_resolved": "file:../d-116618-58584-1do72ft/package.tgz",
+  "_from": "../d-116618-58584-1do72ft/package.tgz",
   "_atomModuleCache": {
     "version": 1,
     "dependencies": [
@@ -112,6 +113,26 @@
         "name": "vow",
         "version": "0.4.4",
         "path": "node_modules/csscomb/node_modules/vow/lib/vow.js"
+      },
+      {
+        "name": "minimatch",
+        "version": "3.0.2",
+        "path": "node_modules/minimatch/minimatch.js"
+      },
+      {
+        "name": "brace-expansion",
+        "version": "1.1.5",
+        "path": "node_modules/minimatch/node_modules/brace-expansion/index.js"
+      },
+      {
+        "name": "balanced-match",
+        "version": "0.4.1",
+        "path": "node_modules/minimatch/node_modules/brace-expansion/node_modules/balanced-match/index.js"
+      },
+      {
+        "name": "concat-map",
+        "version": "0.0.1",
+        "path": "node_modules/minimatch/node_modules/brace-expansion/node_modules/concat-map/index.js"
       }
     ],
     "extensions": {
@@ -192,6 +213,11 @@
         "node_modules/csscomb/node_modules/gonzales-pe/lib/token-types.js",
         "node_modules/csscomb/node_modules/vow/lib/vow.js",
         "node_modules/csscomb/node_modules/vow/vow.min.js",
+        "node_modules/minimatch/minimatch.js",
+        "node_modules/minimatch/node_modules/brace-expansion/index.js",
+        "node_modules/minimatch/node_modules/brace-expansion/node_modules/balanced-match/index.js",
+        "node_modules/minimatch/node_modules/brace-expansion/node_modules/concat-map/example/map.js",
+        "node_modules/minimatch/node_modules/brace-expansion/node_modules/concat-map/index.js",
         "src/css-comb.js",
         "src/main.js"
       ],
@@ -214,6 +240,10 @@
         "node_modules/csscomb/node_modules/gonzales-pe/package.json",
         "node_modules/csscomb/node_modules/vow/package.json",
         "node_modules/csscomb/package.json",
+        "node_modules/minimatch/node_modules/brace-expansion/node_modules/balanced-match/package.json",
+        "node_modules/minimatch/node_modules/brace-expansion/node_modules/concat-map/package.json",
+        "node_modules/minimatch/node_modules/brace-expansion/package.json",
+        "node_modules/minimatch/package.json",
         "package.json"
       ]
     },
@@ -225,7 +255,8 @@
           "src"
         ],
         "dependencies": {
-          "csscomb": "^3.1.8"
+          "csscomb": "^3.1.8",
+          "minimatch": "^3.0.2"
         }
       },
       {
@@ -296,6 +327,23 @@
         ],
         "dependencies": {
           "vow": "~0.4.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/minimatch"
+        ],
+        "dependencies": {
+          "brace-expansion": "^1.0.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/minimatch/node_modules/brace-expansion"
+        ],
+        "dependencies": {
+          "balanced-match": "^0.4.1",
+          "concat-map": "0.0.1"
         }
       }
     ]

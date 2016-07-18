@@ -13,6 +13,7 @@
       "seti-icons"
       "linter-jscs"
       "atom-bootstrap3"
+      "react"
     ]
     themes: [
       "genesis-ui"
@@ -86,8 +87,20 @@
       title: "blame"
       callback: "git-blame:toggle"
     }
+    {
+      icon: "globe"
+      iconSet: "fa"
+      title: "Browser"
+      callback: "open-in-browser:open"
+    }
   ]
   "tree-view":
     hideVcsIgnoredFiles: true
   welcome:
     showOnStartup: false
+".coffee.jsx.source":
+  editor:
+    preferredLineLength: 100
+".js.jsx.source":
+  editor:
+    preferredLineLength: 100
