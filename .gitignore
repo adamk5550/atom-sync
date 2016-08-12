@@ -10,3 +10,4 @@ dev
 .npm
 .node-gyp
 .apm
+.DS_Store

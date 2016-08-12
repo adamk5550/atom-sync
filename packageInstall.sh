@@ -1,11 +1,5 @@
 echo "Thanks for trying out my Atom config, lets get started!"
-
-echo "Do you have Atom installed on your computer? [Y/N]"
-
-read option
-
-if [ $option == "Y" ]|| [ $option == "y" ]; then
-	echo "Awesome, Lets get installing packages"
+echo "Lets get installing packages"
   apm install angularjs
 	apm install atom-ternjs
 	apm install autoclose-html
@@ -34,7 +28,3 @@ if [ $option == "Y" ]|| [ $option == "y" ]; then
 	apm install atom-monokai
 
 	echo "Packages and theme are now installed! "
-
-else
-	echo "Please install atom and try again."
-fi
