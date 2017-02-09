@@ -1,4 +1,7 @@
 # atom-sync
+
+This Repo is no longer maintained due to switching editors. Contributers Welcome
+
 Backup of my Atom packages and config, which can be shared easily
 
 ## Usage
